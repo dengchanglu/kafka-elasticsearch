@@ -4,6 +4,8 @@ import com.alibaba.fastjson.JSONObject;
 import es.EsForward;
 import kafka.consumer.ConsumerIterator;
 import kafka.consumer.KafkaStream;
+
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -23,10 +25,18 @@ public class KafkaConsumer implements Runnable {
     @Override
     public void run() {
         for (ConsumerIterator<byte[], byte[]> it = m_stream.iterator(); it.hasNext(); ) {
-            String msg = (new String(it.next().message())).replaceAll("=",":");
-            Map map = (Map) JSONObject.parseObject(msg);
+            String msg = (new String(it.next().message()));
+            Map maptest = new HashMap<>();
+            try {
+                String[] newMsgs = msg.split("&");
+                for (int i =0;i<newMsgs.length;i++){
+                    maptest.put(newMsgs[i].split("=")[0],newMsgs[i].split("=")[1]);
+                }
+            }catch (Exception e){
+                System.out.println(e.fillInStackTrace());
+            }
             for (EsForward esForward : forwards) {
-                esForward.add(map);
+                esForward.add(maptest);
             }
         }
     }

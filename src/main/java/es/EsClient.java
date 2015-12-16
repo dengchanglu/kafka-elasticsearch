@@ -16,8 +16,9 @@ import java.net.UnknownHostException;
  */
 public class EsClient {
     public TransportClient esForward() {
-        Settings settings = Settings.settingsBuilder().put("client.transport.sniff", true)
-        .put("cluster.name", KafkaProperties.es_cluster).build();
+        Settings settings = Settings.settingsBuilder()
+//                .put("client.transport.sniff", true) 把集群中其它机器的ip地址加到客户端中
+                .put("cluster.name", KafkaProperties.es_cluster).build();
         TransportClient client = null;
         try {
             client = TransportClient.builder().settings(settings).build()

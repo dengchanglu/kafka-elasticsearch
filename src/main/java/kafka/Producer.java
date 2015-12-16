@@ -3,7 +3,11 @@ package kafka;
 /**
  * Created by dengchanglu on 15-11-24.
  */
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Properties;
+
+import com.alibaba.fastjson.JSONObject;
 import kafka.producer.KeyedMessage;
 import kafka.producer.ProducerConfig;
 import utils.KafkaProperties;
@@ -25,10 +29,16 @@ public class Producer extends Thread
   }
 
   public void handlerMsg(String msg){
+
     String newMsg = msg.substring(2,msg.length());
     newMsg = newMsg.split("&callback")[0];
-    newMsg = newMsg.replaceAll("&",",");
-    newMsg = "{"+newMsg+"}";
+//      Map maptest = new HashMap<>();
+//      String[] newMsgs = newMsg.split("&");
+//      for (int i =0;i<newMsgs.length;i++){
+//        maptest.put(newMsgs[i].split("=")[0],newMsgs[i].split("=")[1]);
+//      }
+//
+
     producer.send(new KeyedMessage<Integer, String>(topic, newMsg));
   }
   public void close(){
