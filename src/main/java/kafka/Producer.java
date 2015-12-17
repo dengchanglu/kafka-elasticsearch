@@ -22,8 +22,6 @@ public class Producer extends Thread
   {
     props.put("serializer.class", KafkaProperties.serializer_class);
     props.put("metadata.broker.list", KafkaProperties.metadata_broker_list);
-    // Use random partitioner. Don't need the key type. Just set it to Integer.
-    // The message is of type String.
     producer = new kafka.javaapi.producer.Producer<Integer, String>(new ProducerConfig(props));
     this.topic = topic;
   }
@@ -32,13 +30,6 @@ public class Producer extends Thread
 
     String newMsg = msg.substring(2,msg.length());
     newMsg = newMsg.split("&callback")[0];
-//      Map maptest = new HashMap<>();
-//      String[] newMsgs = newMsg.split("&");
-//      for (int i =0;i<newMsgs.length;i++){
-//        maptest.put(newMsgs[i].split("=")[0],newMsgs[i].split("=")[1]);
-//      }
-//
-
     producer.send(new KeyedMessage<Integer, String>(topic, newMsg));
   }
   public void close(){

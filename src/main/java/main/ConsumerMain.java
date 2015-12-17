@@ -4,6 +4,7 @@ import es.EsForward;
 import es.EsPools;
 import kafka.Consumer;
 import org.elasticsearch.client.transport.TransportClient;
+import utils.GetResources;
 import utils.KafkaProperties;
 
 import java.time.ZoneId;

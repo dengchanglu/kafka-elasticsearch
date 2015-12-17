@@ -3,11 +3,12 @@ mode=prod
 topic=xyebank_relog
 port=9092
 
-BASE_DIR=`dirname $0`
+BASE_DIR=$(cd "$(dirname "$0")";pwd)
 JAVA_HOME=`${JAVA_HOME}`
 if [${JAVA_HOME} == ""]
+
     then
-        JAVA_HOME=/usr/local/jdk/jdk1.8.0_45
+        JAVA_HOME=/usr/java/jdk1.8.0_65
 fi
 
 while getopts "m:p:t:" arg
@@ -28,4 +29,4 @@ while getopts "m:p:t:" arg
         esac
     done
 
-${JAVA_HOME}/bin/java -Xms2g -Xmx2g -cp ${BASE_DIR}:${BASE_DIR}/lib/*:${BASE_DIR}/conf com.ss.main.RelogProducerMain ${mode} ${topic} ${port}
+${JAVA_HOME}/bin/java -Xms2g -Xmx2g -cp ${BASE_DIR}:${BASE_DIR}/lib/*:${BASE_DIR}/conf  main.ProducerMain ${mode} ${topic} ${port}

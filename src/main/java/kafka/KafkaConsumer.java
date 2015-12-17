@@ -21,7 +21,6 @@ public class KafkaConsumer implements Runnable {
         this.forwards = forwards;
     }
 
-
     @Override
     public void run() {
         for (ConsumerIterator<byte[], byte[]> it = m_stream.iterator(); it.hasNext(); ) {

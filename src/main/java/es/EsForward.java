@@ -39,7 +39,6 @@ public class EsForward extends Thread{
     }
 
     public void add(Map<String, Object> obj) {
-        System.out.println(obj.toString());
         queue.add(obj);
     }
 

@@ -20,7 +20,6 @@ public class ProducerMain {
     public static void main(String[] args) {
         TimeZone.setDefault(TimeZone.getTimeZone(ZoneId.of("Asia/Shanghai")));
         ServerBootstrap serverBootstrap = new ServerBootstrap();
-
         NioEventLoopGroup nioEventLoopGroup2 = new NioEventLoopGroup(2);
         NioEventLoopGroup nioEventLoopGroup1 = new NioEventLoopGroup();
         final Producer producer = new Producer(KafkaProperties.topic);

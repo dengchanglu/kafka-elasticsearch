@@ -26,7 +26,6 @@ public class EsPools {
             synchronized (EsPools.class) {
                 if (clients.isEmpty()) {
                     EsClient esClient =new EsClient();
-                    System.out.print(esClient.esForward());
                     clients.add(new EsClient().esForward());
                 }
             }
