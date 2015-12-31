@@ -48,6 +48,7 @@ public class EsHttpHandler extends SimpleChannelInboundHandler<HttpObject> {
             response.setStatus(HttpResponseStatus.OK);
             channelHandlerContext.write(response);
             channelHandlerContext.flush();
+            channelHandlerContext.close();
         }
     }
 }
