@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eclipse-userlibraries>
+  <library name="Maven: org.apache.kafka:kafka-clients:0.8.2.1">
+    <archive path="/home/perfection/.m2/repository/org/apache/kafka/kafka-clients/0.8.2.1/kafka-clients-0.8.2.1.jar" />
+  </library>
+  <library name="Maven: net.jpountz.lz4:lz4:1.2.0">
+    <archive path="/home/perfection/.m2/repository/net/jpountz/lz4/lz4/1.2.0/lz4-1.2.0.jar" />
+  </library>
+  <library name="Maven: com.carrotsearch:hppc:0.7.1">
+    <archive path="/home/perfection/.m2/repository/com/carrotsearch/hppc/0.7.1/hppc-0.7.1.jar" />
+  </library>
+  <library name="Maven: com.twitter:jsr166e:1.1.0">
+    <archive path="/home/perfection/.m2/repository/com/twitter/jsr166e/1.1.0/jsr166e-1.1.0.jar" />
+  </library>
+  <library name="Maven: org.scala-lang.modules:scala-parser-combinators_2.11:1.0.2">
+    <archive path="/home/perfection/.m2/repository/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.2/scala-parser-combinators_2.11-1.0.2.jar" />
+  </library>
+  <library name="Maven: org.apache.zookeeper:zookeeper:3.4.6">
+    <archive path="/home/perfection/.m2/repository/org/apache/zookeeper/zookeeper/3.4.6/zookeeper-3.4.6.jar" />
+  </library>
+  <library name="Maven: org.slf4j:slf4j-api:1.7.6">
+    <archive path="/home/perfection/.m2/repository/org/slf4j/slf4j-api/1.7.6/slf4j-api-1.7.6.jar" />
+  </library>
+  <library name="Maven: org.scala-lang:scala-library:2.11.5">
+    <archive path="/home/perfection/.m2/repository/org/scala-lang/scala-library/2.11.5/scala-library-2.11.5.jar" />
+  </library>
+  <library name="Maven: jline:jline:0.9.94">
+    <archive path="/home/perfection/.m2/repository/jline/jline/0.9.94/jline-0.9.94.jar" />
+  </library>
+  <library name="Maven: com.google.guava:guava:18.0">
+    <archive path="/home/perfection/.m2/repository/com/google/guava/guava/18.0/guava-18.0.jar" />
+  </library>
+  <library name="Maven: net.sf.jopt-simple:jopt-simple:3.2">
+    <archive path="/home/perfection/.m2/repository/net/sf/jopt-simple/jopt-simple/3.2/jopt-simple-3.2.jar" />
+  </library>
+  <library name="Maven: org.slf4j:slf4j-log4j12:1.7.12">
+    <archive path="/home/perfection/.m2/repository/org/slf4j/slf4j-log4j12/1.7.12/slf4j-log4j12-1.7.12.jar" />
+  </library>
+  <library name="Maven: com.ning:compress-lzf:1.0.3">
+    <archive path="/home/perfection/.m2/repository/com/ning/compress-lzf/1.0.3/compress-lzf-1.0.3.jar" />
+  </library>
+  <library name="Maven: com.101tec:zkclient:0.3">
+    <archive path="/home/perfection/.m2/repository/com/101tec/zkclient/0.3/zkclient-0.3.jar" />
+  </library>
+  <library name="Maven: com.tdunning:t-digest:3.1">
+    <archive path="/home/perfection/.m2/repository/com/tdunning/t-digest/3.1/t-digest-3.1.jar" />
+  </library>
+  <library name="Maven: org.xerial.snappy:snappy-java:1.1.1.6">
+    <archive path="/home/perfection/.m2/repository/org/xerial/snappy/snappy-java/1.1.1.6/snappy-java-1.1.1.6.jar" />
+  </library>
+  <library name="Maven: com.alibaba:fastjson:1.2.6">
+    <archive path="/home/perfection/.m2/repository/com/alibaba/fastjson/1.2.6/fastjson-1.2.6.jar" />
+  </library>
+  <library name="Maven: com.yammer.metrics:metrics-core:2.2.0">
+    <archive path="/home/perfection/.m2/repository/com/yammer/metrics/metrics-core/2.2.0/metrics-core-2.2.0.jar" />
+  </library>
+  <library name="Maven: io.netty:netty-all:4.0.27.Final">
+    <archive path="/home/perfection/.m2/repository/io/netty/netty-all/4.0.27.Final/netty-all-4.0.27.Final.jar" />
+  </library>
+  <library name="Maven: org.elasticsearch:elasticsearch:2.0.0">
+    <archive path="/home/perfection/.m2/repository/org/elasticsearch/elasticsearch/2.0.0/elasticsearch-2.0.0.jar" />
+  </library>
+  <library name="Maven: junit:junit:3.8.1">
+    <archive path="/home/perfection/.m2/repository/junit/junit/3.8.1/junit-3.8.1.jar" />
+  </library>
+  <library name="Maven: log4j:log4j:1.2.17">
+    <archive path="/home/perfection/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar" />
+  </library>
+  <library name="Maven: io.netty:netty:3.7.0.Final">
+    <archive path="/home/perfection/.m2/repository/io/netty/netty/3.7.0.Final/netty-3.7.0.Final.jar" />
+  </library>
+  <library name="Maven: org.apache.commons:commons-lang3:3.3.2">
+    <archive path="/home/perfection/.m2/repository/org/apache/commons/commons-lang3/3.3.2/commons-lang3-3.3.2.jar" />
+  </library>
+  <library name="Maven: org.apache.kafka:kafka_2.11:0.8.2.1">
+    <archive path="/home/perfection/.m2/repository/org/apache/kafka/kafka_2.11/0.8.2.1/kafka_2.11-0.8.2.1.jar" />
+  </library>
+  <library name="Maven: org.apache.lucene:lucene-core:5.3.1">
+    <archive path="/home/perfection/.m2/repository/org/apache/lucene/lucene-core/5.3.1/lucene-core-5.3.1.jar" />
+  </library>
+  <library name="Maven: org.scala-lang.modules:scala-xml_2.11:1.0.2">
+    <archive path="/home/perfection/.m2/repository/org/scala-lang/modules/scala-xml_2.11/1.0.2/scala-xml_2.11-1.0.2.jar" />
+  </library>
+  <library name="Maven: joda-time:joda-time:2.8.2">
+    <archive path="/home/perfection/.m2/repository/joda-time/joda-time/2.8.2/joda-time-2.8.2.jar" />
+  </library>
+  <library name="Maven: redis.clients:jedis:2.8.0">
+    <archive path="/home/perfection/.m2/repository/redis/clients/jedis/2.8.0/jedis-2.8.0.jar" />
+  </library>
+  <library name="Node.js v0.12.7 Core Modules">
+    <archive path="/home/perfection/.IntelliJIdea14/system/extLibs/nodejs-v0.12.7-src/core-modules-sources/lib/util.js" />
+    <archive path="/home/perfection/.IntelliJIdea14/system/extLibs/nodejs-v0.12.7-src/core-modules-sources/lib/_http_incoming.js" />
+    <archive path="/home/perfection/.IntelliJIdea14/system/extLibs/nodejs-v0.12.7-src/core-modules-sources/lib/freelist.js" />
+    <archive path="/home/perfection/.IntelliJIdea14/system/extLibs/nodejs-v0.12.7-src/core-modules-sources/lib/_stream_writable.js" />
+    <archive path="/home/perfection/.IntelliJIdea14/system/extLibs/nodejs-v0.12.7-src/core-modules-sources/lib/url.js" />
+    <archive path="/home/perfection/.IntelliJIdea14/system/extLibs/nodejs-v0.12.7-src/core-modules-sources/lib/stream.js" />
+    <archive path="/home/perfection/.IntelliJIdea14/system/extLibs/nodejs-v0.12.7-src/core-modules-sources/lib/vm.js" />
+    <archive path="/home/perfection/.IntelliJIdea14/system/extLibs/nodejs-v0.12.7-src/core-modules-sources/lib/buffer.js" />
+    <archive path="/home/perfection/.IntelliJIdea14/system/extLibs/nodejs-v0.12.7-src/core-modules-sources/lib/module.js" />
+    <archive path="/home/perfection/.IntelliJIdea14/system/extLibs/nodejs-v0.12.7-src/core-modules-sources/lib/assert.js" />
+    <archive path="/home/perfection/.IntelliJIdea14/system/extLibs/nodejs-v0.12.7-src/core-modules-sources/lib/dgram.js" />
+    <archive path="/home/perfection/.IntelliJIdea14/system/extLibs/nodejs-v0.12.7-src/core-modules-sources/lib/timers.js" />
+    <archive path="/home/perfection/.IntelliJIdea14/system/extLibs/nodejs-v0.12.7-src/core-modules-sources/lib/dns.js" />
+    <archive path="/home/perfection/.IntelliJIdea14/system/extLibs/nodejs-v0.12.7-src/core-modules-sources/lib/console.js" />
+    <archive path="/home/perfection/.IntelliJIdea14/system/extLibs/nodejs-v0.12.7-src/core-modules-sources/lib/cluster.js" />
+    <archive path="/home/perfection/.IntelliJIdea14/system/extLibs/nodejs-v0.12.7-src/core-modules-sources/lib/_http_server.js" />
+    <archive path="/home/perfection/.IntelliJIdea14/system/extLibs/nodejs-v0.12.7-src/core-modules-sources/lib/repl.js" />
+    <archive path="/home/perfection/.IntelliJIdea14/system/extLibs/nodejs-v0.12.7-src/core-modules-sources/lib/os.js" />
+    <archive path="/home/perfection/.IntelliJIdea14/system/extLibs/nodejs-v0.12.7-src/core-modules-sources/lib/_debugger.js" />
+    <archive path="/home/perfection/.IntelliJIdea14/system/extLibs/nodejs-v0.12.7-src/core-modules-sources/lib/tls.js" />
+    <archive path="/home/perfection/.IntelliJIdea14/system/extLibs/nodejs-v0.12.7-src/core-modules-sources/lib/_stream_transform.js" />
+    <archive path="/home/perfection/.IntelliJIdea14/system/extLibs/nodejs-v0.12.7-src/core-modules-sources/lib/_linklist.js" />
+    <archive path="/home/perfection/.IntelliJIdea14/system/extLibs/nodejs-v0.12.7-src/core-modules-sources/lib/http.js" />
+    <archive path="/home/perfection/.IntelliJIdea14/system/extLibs/nodejs-v0.12.7-src/core-modules-sources/lib/_tls_common.js" />
+    <archive path="/home/perfection/.IntelliJIdea14/system/extLibs/nodejs-v0.12.7-src/core-modules-sources/lib/_tls_legacy.js" />
+    <archive path="/home/perfection/.IntelliJIdea14/system/extLibs/nodejs-v0.12.7-src/core-modules-sources/lib/smalloc.js" />
+    <archive path="/home/perfection/.IntelliJIdea14/system/extLibs/nodejs-v0.12.7-src/core-modules-sources/lib/https.js" />
+    <archive path="/home/perfection/.IntelliJIdea14/system/extLibs/nodejs-v0.12.7-src/core-modules-sources/lib/querystring.js" />
+    <archive path="/home/perfection/.IntelliJIdea14/system/extLibs/nodejs-v0.12.7-src/core-modules-sources/lib/_tls_wrap.js" />
+    <archive path="/home/perfection/.IntelliJIdea14/system/extLibs/nodejs-v0.12.7-src/core-modules-sources/lib/child_process.js" />
+    <archive path="/home/perfection/.IntelliJIdea14/system/extLibs/nodejs-v0.12.7-src/core-modules-sources/lib/_http_common.js" />
+    <archive path="/home/perfection/.IntelliJIdea14/system/extLibs/nodejs-v0.12.7-src/core-modules-sources/lib/crypto.js" />
+    <archive path="/home/perfection/.IntelliJIdea14/system/extLibs/nodejs-v0.12.7-src/core-modules-sources/lib/_http_client.js" />
+    <archive path="/home/perfection/.IntelliJIdea14/system/extLibs/nodejs-v0.12.7-src/core-modules-sources/lib/readline.js" />
+    <archive path="/home/perfection/.IntelliJIdea14/system/extLibs/nodejs-v0.12.7-src/core-modules-sources/lib/punycode.js" />
+    <archive path="/home/perfection/.IntelliJIdea14/system/extLibs/nodejs-v0.12.7-src/core-modules-sources/lib/string_decoder.js" />
+    <archive path="/home/perfection/.IntelliJIdea14/system/extLibs/nodejs-v0.12.7-src/core-modules-sources/lib/_stream_duplex.js" />
+    <archive path="/home/perfection/.IntelliJIdea14/system/extLibs/nodejs-v0.12.7-src/core-modules-sources/lib/path.js" />
+    <archive path="/home/perfection/.IntelliJIdea14/system/extLibs/nodejs-v0.12.7-src/core-modules-sources/lib/sys.js" />
+    <archive path="/home/perfection/.IntelliJIdea14/system/extLibs/nodejs-v0.12.7-src/core-modules-sources/lib/_stream_readable.js" />
+    <archive path="/home/perfection/.IntelliJIdea14/system/extLibs/nodejs-v0.12.7-src/core-modules-sources/lib/_http_outgoing.js" />
+    <archive path="/home/perfection/.IntelliJIdea14/system/extLibs/nodejs-v0.12.7-src/core-modules-sources/lib/_http_agent.js" />
+    <archive path="/home/perfection/.IntelliJIdea14/system/extLibs/nodejs-v0.12.7-src/core-modules-sources/lib/_stream_passthrough.js" />
+    <archive path="/home/perfection/.IntelliJIdea14/system/extLibs/nodejs-v0.12.7-src/core-modules-sources/lib/tty.js" />
+    <archive path="/home/perfection/.IntelliJIdea14/system/extLibs/nodejs-v0.12.7-src/core-modules-sources/lib/fs.js" />
+    <archive path="/home/perfection/.IntelliJIdea14/system/extLibs/nodejs-v0.12.7-src/core-modules-sources/lib/zlib.js" />
+    <archive path="/home/perfection/.IntelliJIdea14/system/extLibs/nodejs-v0.12.7-src/core-modules-sources/lib/domain.js" />
+    <archive path="/home/perfection/.IntelliJIdea14/system/extLibs/nodejs-v0.12.7-src/core-modules-sources/lib/events.js" />
+    <archive path="/home/perfection/.IntelliJIdea14/system/extLibs/nodejs-v0.12.7-src/core-modules-sources/lib/constants.js" />
+    <archive path="/home/perfection/.IntelliJIdea14/system/extLibs/nodejs-v0.12.7-src/core-modules-sources/lib/net.js" />
+  </library>
+  <library name="scala-sdk-2.12.0-M3">
+    <archive path="/home/perfection/scala/scala-2.12.0-M3/lib/scala-swing_2.12.0-M3-2.0.0-M2.jar" />
+    <archive path="/home/perfection/scala/scala-2.12.0-M3/lib/scala-reflect.jar" />
+    <archive path="/home/perfection/scala/scala-2.12.0-M3/lib/scala-library.jar" />
+    <archive path="/home/perfection/scala/scala-2.12.0-M3/lib/scala-xml_2.12.0-M3-1.0.5.jar" />
+    <archive path="/home/perfection/scala/scala-2.12.0-M3/lib/scala-parser-combinators_2.12.0-M3-1.0.4.jar" />
+  </library>
+</eclipse-userlibraries>
+

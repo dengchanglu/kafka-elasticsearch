@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component LANGUAGE_LEVEL="JDK_1_8" inheritJdk="true">
+	<output-test url="file://$MODULE_DIR$/target/test-classes"/>
+	<contentEntry url="file://$MODULE_DIR$">
+		<testFolder url="file://$MODULE_DIR$/src/test/java"/>
+		<excludeFolder url="file://$MODULE_DIR$/target"/>
+	</contentEntry>
+	<levels>
+		<level name="Maven: io.netty:netty-all:3.7.0.Final" value="project"/>
+		<level name="Maven: io.netty:netty-all:4.0.27.Final" value="project"/>
+		<level name="Maven: org.elasticsearch:elasticsearch:2.0.0" value="project"/>
+		<level name="Maven: redis.clients:jedis:2.8.0" value="project"/>
+		<level name="Maven: org.apache.kafka:kafka_2.11:0.8.2.1" value="project"/>
+		<level name="Maven: org.scala-lang.modules:scala-xml_2.11:1.0.2" value="project"/>
+		<level name="Maven: com.yammer.metrics:metrics-core:2.2.0" value="project"/>
+		<level name="Maven: net.sf.jopt-simple:jopt-simple:3.2" value="project"/>
+		<level name="Maven: org.scala-lang.modules:scala-parser-combinators_2.11:1.0.2" value="project"/>
+		<level name="Maven: com.101tec:zkclient:0.3" value="project"/>
+		<level name="Maven: org.scala-lang:scala-library:2.11.5" value="project"/>
+		<level name="Maven: org.apache.zookeeper:zookeeper:3.4.6" value="project"/>
+		<level name="Maven: jline:jline:0.9.94" value="project"/>
+		<level name="Maven: junit:junit:3.8.1" value="project"/>
+		<level name="Maven: io.netty:netty:3.7.0.Final" value="project"/>
+		<level name="Maven: org.apache.kafka:kafka-clients:0.8.2.1" value="project"/>
+		<level name="Maven: org.slf4j:slf4j-api:1.7.6" value="project"/>
+		<level name="Maven: net.jpountz.lz4:lz4:1.2.0" value="project"/>
+		<level name="Maven: org.xerial.snappy:snappy-java:1.1.1.6" value="project"/>
+		<level name="Maven: com.alibaba:fastjson:1.2.6" value="project"/>
+		<level name="Maven: org.apache.commons:commons-lang3:3.3.2" value="project"/>
+		<level name="Maven: org.slf4j:slf4j-log4j12:1.7.12" value="project"/>
+		<level name="Maven: log4j:log4j:1.2.17" value="project"/>
+		<level name="Maven: com.google.guava:guava:18.0" value="project"/>
+		<level name="Maven: org.apache.lucene:lucene-core:5.3.1" value="project"/>
+		<level name="Maven: joda-time:joda-time:2.8.2" value="project"/>
+		<level name="Maven: com.twitter:jsr166e:1.1.0" value="project"/>
+		<level name="Maven: com.tdunning:t-digest:3.1" value="project"/>
+		<level name="Maven: com.carrotsearch:hppc:0.7.1" value="project"/>
+		<level name="Maven: com.ning:compress-lzf:1.0.3" value="project"/>
+	</levels>
+</component>

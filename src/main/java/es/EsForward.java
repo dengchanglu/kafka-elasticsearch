@@ -21,7 +21,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 /**
  * Created by perfection on 15-11-25.
  */
-public class EsForward extends Thread{
+public class EsForward extends Thread {
     private static final int ONE_DAY_SECONDS = 86_400;
 
     private final int HANDLER_WORKERS = Runtime.getRuntime().availableProcessors() * 2;
@@ -60,13 +60,15 @@ public class EsForward extends Thread{
     }
 
     private void addRequest(TransportClient client, BlockingQueue<IndexRequest> requestQueue, Map<String, Object> source) {
-        Date date=new Date();
-        DateFormat format=new SimpleDateFormat("yyyy-MM-dd");
-        String time=format.format(date);
+        Date date = new Date();
+        DateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+        String time = format.format(date);
         IndexRequestBuilder builder = client.prepareIndex();
-        builder.setIndex(KafkaProperties.index+time);
+        builder.setIndex(KafkaProperties.index + "2016-02-19");
         String type = KafkaProperties.appLog;
         builder.setType(type);
+        DateFormat formatStamp = new SimpleDateFormat("yyyyMMddHHmmss");
+        source.put("timeStamp", formatStamp.format(date));
         builder.setSource(JSON.toJSONString(source));
         requestQueue.add(builder.request());
     }

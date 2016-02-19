@@ -28,13 +28,14 @@ public class EsHttpHandler extends SimpleChannelInboundHandler<HttpObject> {
             String msg = URLDecoder.decode(request.getUri(),"UTF-8");
             if(msg.equals("/favicon.ico")){
             }else{
+//                System.out.println(msg);
                 producer.handlerMsg(msg);
             }
 
         }if (httpObject instanceof HttpContent) {
             HttpContent content = (HttpContent) httpObject;
             ByteBuf buf = content.content();
-            System.out.println(buf.toString(io.netty.util.CharsetUtil.UTF_8));
+//            System.out.println(buf.toString(io.netty.util.CharsetUtil.UTF_8));
             buf.release();
 
             String res = "OK";
