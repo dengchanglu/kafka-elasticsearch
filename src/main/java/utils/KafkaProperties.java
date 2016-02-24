@@ -24,4 +24,5 @@ public interface KafkaProperties {
     final static String port = GetResources.getProperty("src/main/resources/","netty.properties","port");
     final static String index = GetResources.getProperty("src/main/resources/","elasticsearch.properties","index");
     final static String appLog = GetResources.getProperty("src/main/resources/","elasticsearch.properties","type");
+    final static String es_port = GetResources.getProperty("src/main/resources/","elasticsearch.properties","es.port");
 }

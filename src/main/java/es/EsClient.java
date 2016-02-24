@@ -19,7 +19,8 @@ public class EsClient {
         TransportClient client = null;
         try {
             client = TransportClient.builder().settings(settings).build()
-                    .addTransportAddress(new InetSocketTransportAddress(InetAddress.getByName(KafkaProperties.es_host), 9305));
+                    .addTransportAddress(new InetSocketTransportAddress(InetAddress.getByName(KafkaProperties.es_host),
+                            Integer.parseInt(KafkaProperties.es_port)));
         } catch (UnknownHostException e) {
             e.printStackTrace();
         }
