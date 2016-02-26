@@ -6,15 +6,12 @@ import org.elasticsearch.action.bulk.BulkResponse;
 import org.elasticsearch.action.index.IndexRequest;
 import org.elasticsearch.action.index.IndexRequestBuilder;
 import org.elasticsearch.client.transport.TransportClient;
-import utils.KafkaProperties;
+import utils.ResourcesUtil;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.time.ZoneId;
 import java.util.Date;
 import java.util.Map;
-import java.util.SimpleTimeZone;
-import java.util.TimeZone;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -28,9 +25,11 @@ public class EsForward extends Thread {
 
     private final BlockingQueue<Map<String, Object>> queue = new LinkedBlockingQueue<>();
 
-    private final ExecutorService preHandlerExecutor = Executors.newFixedThreadPool(HANDLER_WORKERS, new DataPreHandleThreadFactory());
+    private final ExecutorService preHandlerExecutor =
+            Executors.newFixedThreadPool(HANDLER_WORKERS, new DataPreHandleThreadFactory());
 
-    private final ExecutorService requestHandlerExecutor = Executors.newFixedThreadPool(HANDLER_WORKERS, new EsRequestThreadFactory());
+    private final ExecutorService requestHandlerExecutor =
+            Executors.newFixedThreadPool(HANDLER_WORKERS, new EsRequestThreadFactory());
 
     public EsForward(TransportClient client) {
         BlockingQueue<IndexRequest> requestQueue = new LinkedBlockingQueue<>();
@@ -59,13 +58,14 @@ public class EsForward extends Thread {
         }
     }
 
-    private void addRequest(TransportClient client, BlockingQueue<IndexRequest> requestQueue, Map<String, Object> source) {
+    private void addRequest(TransportClient client, BlockingQueue<IndexRequest> requestQueue,
+                            Map<String, Object> source) {
         Date date = new Date();
         DateFormat format = new SimpleDateFormat("yyyy-MM-dd");
         String time = format.format(date);
         IndexRequestBuilder builder = client.prepareIndex();
-        builder.setIndex(KafkaProperties.index + time);
-        String type = KafkaProperties.appLog;
+        builder.setIndex(ResourcesUtil.getES("index") + time);
+        String type = ResourcesUtil.getES("type");
         builder.setType(type);
         builder.setSource(JSON.toJSONString(source));
         requestQueue.add(builder.request());

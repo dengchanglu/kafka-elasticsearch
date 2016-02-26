@@ -12,7 +12,7 @@ import es.EsForward;
 import kafka.consumer.ConsumerConfig;
 import kafka.consumer.KafkaStream;
 import kafka.javaapi.consumer.ConsumerConnector;
-import utils.KafkaProperties;
+import utils.ResourcesUtil;
 
 /**
  * Created by dengchanglu on 15-11-24.
@@ -31,16 +31,23 @@ public class Consumer {
 
     private static ConsumerConfig createConsumerConfig() {
         Properties props = new Properties();
-        props.put("zookeeper.connect", KafkaProperties.zkConnect);
-        props.put("group.id", KafkaProperties.groupId);
-        props.put("zookeeper.session.timeout.ms", KafkaProperties.zookeeper_session_timeout_ms);
-        props.put("zookeeper.sync.time.ms", KafkaProperties.zookeeper_sync_time_ms);
-        props.put("auto.commit.interval.ms", KafkaProperties.auto_commit_interval_ms);
+        props.put("zookeeper.connect", ResourcesUtil.getZookeeper("zookeeper.connect"));
+        props.put("group.id", ResourcesUtil.getConsumer("group.id"));
+        props.put("zookeeper.session.timeout.ms", ResourcesUtil.getZookeeper("zookeeper.session.timeout.ms"));
+        props.put("zookeeper.sync.time.ms", ResourcesUtil.getZookeeper("zookeeper.sync.time.ms"));
+        props.put("auto.commit.interval.ms", ResourcesUtil.getZookeeper("auto.commit.interval.ms"));
+        props.put("zookeeper.connection.timeout.ms", ResourcesUtil.getZookeeper("zookeeper.connection.timeout.ms"));
 
         return new ConsumerConfig(props);
 
     }
 
+    /**
+     * 从生产者订阅的消息
+     *
+     * @param a_threadNumber 处理线程数量
+     * @param forwards       es的数据处理逻辑类
+     */
     private void setRun(int a_threadNumber, List<EsForward> forwards) {
         Map<String, Integer> topicCountMap = new HashMap<>();
         topicCountMap.put(topic, a_threadNumber);

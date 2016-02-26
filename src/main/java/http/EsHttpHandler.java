@@ -18,21 +18,30 @@ public class EsHttpHandler extends SimpleChannelInboundHandler<HttpObject> {
     public EsHttpHandler(Producer producer) {
         this.producer = producer;
     }
+
     private HttpRequest request;
 
+    /**
+     * 获取的最原始的http请求数据（返回的消息逻辑不太对或者说是代码不对）
+     *
+     * @param channelHandlerContext 消息前期处理
+     * @param httpObject            http对象
+     * @throws Exception 状态数据外发所产生的异常
+     */
     @Override
     protected void channelRead0(ChannelHandlerContext channelHandlerContext, HttpObject httpObject) throws Exception {
         if (httpObject instanceof HttpRequest) {
 
-            HttpRequest request = (HttpRequest)httpObject;
-            String msg = URLDecoder.decode(request.getUri(),"UTF-8");
-            if(msg.equals("/favicon.ico")){
-            }else{
+            HttpRequest request = (HttpRequest) httpObject;
+            String msg = URLDecoder.decode(request.getUri(), "UTF-8");
+            if (msg.equals("/favicon.ico")) {
+            } else {
 //                System.out.println(msg);
                 producer.handlerMsg(msg);
             }
 
-        }if (httpObject instanceof HttpContent) {
+        }
+        if (httpObject instanceof HttpContent) {
             HttpContent content = (HttpContent) httpObject;
             ByteBuf buf = content.content();
 //            System.out.println(buf.toString(io.netty.util.CharsetUtil.UTF_8));
@@ -40,7 +49,7 @@ public class EsHttpHandler extends SimpleChannelInboundHandler<HttpObject> {
 
             String res = "OK";
             FullHttpResponse response = new DefaultFullHttpResponse(HttpVersion.HTTP_1_1,
-                    HttpResponseStatus.OK,Unpooled.wrappedBuffer(res.getBytes("UTF-8")));
+                    HttpResponseStatus.OK, Unpooled.wrappedBuffer(res.getBytes("UTF-8")));
             response.headers().set("CONTENT_TYPE", "text/plain");
             response.headers().set("CONTENT_LENGTH",
                     response.content().readableBytes());
