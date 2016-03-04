@@ -23,20 +23,10 @@ public class EsPools {
     }
 
     public static List<TransportClient> getEsClient() {
-        System.out.println("--------------------------------------------------------------------------------------------");
         if (clients.isEmpty()) {
             synchronized (EsPools.class) {
-                System.out.println("===========================================================================================");
                 if (clients.isEmpty()) {
-                    System.out.println("**********************************************************************************************");
-//                    EsClient esClient = new EsClient();
-//                    clients.add(esClient.esForward());
-//                    ResourceBundle bundle = ResourceBundle.getBundle("elasticsearch");
-//                    String hosts = bundle.getString("es.host");
-//                    String cluster = bundle.getString("es.cluster");
-
                     clients.addAll(initEsClient(ResourcesUtil.getES("es.host"), ResourcesUtil.getES("es.cluster")));
-                    System.out.println(clients);
                 }
             }
         }
@@ -60,11 +50,10 @@ public class EsPools {
                     else if (arr.length == 2)
                         addressList.add(new InetSocketTransportAddress(InetAddress.getByName(arr[0]),
                                 Integer.valueOf(arr[1])));
-                    System.out.println(InetAddress.getByName(arr[0]) + ":" + Integer.valueOf(arr[1]));
                 }
                 String clusterName = cluster;
 
-                Settings settings = Settings.settingsBuilder().put(esMap)
+                Settings settings = Settings.settingsBuilder()
                         .put("cluster.name", clusterName)
                         .put("client.transport.sniff", true)
                         .put("client.transport.ignore_cluster_name", false)

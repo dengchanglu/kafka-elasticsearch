@@ -1,7 +1,7 @@
 <assembly xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly"
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly http://maven.apache.org/xsd/assembly-1.1.2.xsd">
-    <id>distribution</id>
+    <id>bate</id>
     <formats>
         <format>zip</format>
     </formats>
@@ -10,7 +10,7 @@
     <fileSets>
         <fileSet>
             <directory>src/main/resources</directory>
-            <outputDirectory>/conf</outputDirectory>
+            <outputDirectory>conf</outputDirectory>
             <filtered>true</filtered>
             <excludes>
                 <exclude>**/*.sh</exclude>
@@ -22,13 +22,13 @@
     <files>
         <file>
             <source>src/main/resources/producer.sh</source>
-            <outputDirectory>/</outputDirectory>
+            <outputDirectory></outputDirectory>
             <fileMode>0755</fileMode>
             <filtered>true</filtered>
         </file>
         <file>
             <source>src/main/resources/consumer.sh</source>
-            <outputDirectory>/</outputDirectory>
+            <outputDirectory></outputDirectory>
             <fileMode>0755</fileMode>
             <filtered>true</filtered>
         </file>
@@ -36,7 +36,7 @@
 
     <dependencySets>
         <dependencySet>
-            <outputDirectory>/lib</outputDirectory>
+            <outputDirectory>lib</outputDirectory>
         </dependencySet>
     </dependencySets>
 

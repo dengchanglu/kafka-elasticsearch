@@ -15,12 +15,14 @@ import java.net.UnknownHostException;
 public class EsClient {
     public TransportClient esForward() {
         Settings settings = Settings.settingsBuilder()
-                .put("client.transport.sniff", true) //把集群中其它机器的ip地址加到客户端中
+//                .put("client.transport.sniff", true) //把集群中其它机器的ip地址加到客户端中
                 .put("cluster.name", ResourcesUtil.getES("es.cluster")).build();
         TransportClient client = null;
         try {
+            System.out.println(ResourcesUtil.getES("es.host"));
+            System.out.println(ResourcesUtil.getES("es.port"));
             client = TransportClient.builder().settings(settings).build()
-                    .addTransportAddress(new InetSocketTransportAddress(
+                    .addTransportAddresses(new InetSocketTransportAddress(
                             InetAddress.getByName(ResourcesUtil.getES("es.host")),
                             Integer.parseInt(ResourcesUtil.getES("es.port"))));
         } catch (UnknownHostException e) {
